@@ -116,6 +116,70 @@
 .btn__arrow { transition: transform 240ms var(--ease); }
 .btn:hover .btn__arrow { transform: translateX(3px); }
 
+/* ============ Hero centered (homepage) ============ */
+.hero-centered {
+  padding-block: clamp(3rem, 9vw, var(--space-8)) 0;
+}
+.hero-centered__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  padding-bottom: clamp(2.5rem, 6vw, var(--space-7));
+}
+.hero-centered__h1 {
+  margin: var(--space-3) 0 var(--space-3);
+}
+.hero-centered__logo {
+  display: block;
+  width: clamp(320px, 72vw, 880px);
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.hero-centered__lead {
+  max-width: 56ch;
+  font-size: var(--fs-md);
+  color: var(--color-ink-soft);
+  margin: 0 auto;
+}
+.hero-centered__cta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-3);
+}
+.hero-centered__media {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+.hero-centered__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 800px) {
+  .hero-centered__media { aspect-ratio: 4 / 5; }
+}
+
+/* Header brand fade — alleen op homepage verstopt tot scroll */
+body.is-home .site-header .brand {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 500ms var(--ease), transform 500ms var(--ease);
+}
+body.is-home .site-header.is-scrolled .brand {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
 /* ============ Hero ============ */
 .hero {
   display: grid;
