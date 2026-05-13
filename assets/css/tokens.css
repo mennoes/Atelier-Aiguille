@@ -42,7 +42,7 @@
 
   /* Typografie */
   --font-display: "Cobya", "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
-  --font-body:    "Inter", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body:    "Manrope", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
 
   --fs-xs:   0.8125rem;
   --fs-sm:   0.9375rem;
