@@ -436,6 +436,17 @@
 }
 .inverse .placeholder::after { color: color-mix(in srgb, var(--color-inverse-ink) 40%, transparent); }
 
+/* Display accent — gebruikt voor highlight binnen Cobya headings */
+.accent {
+  color: var(--color-blush);
+  opacity: 0.7;
+}
+.tile-blush .accent,
+section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; }
+
+/* Neutraliseer em binnen display-headings (Cobya kent geen italic) */
+.wordmark em, .claim__title em, .cover__title em, h1 em, h2 em, h3 em { font-style: normal; }
+
 /* ============ Claim banner ============ */
 .claim {
   padding-block: clamp(4rem, 10vw, var(--space-9));
@@ -482,11 +493,37 @@
   letter-spacing: 0;
   line-height: 0.92;
   display: inline-block;
+  color: var(--color-aubergine);
 }
 .wordmark--sm  { font-size: 1.5rem; }
 .wordmark--md  { font-size: clamp(2rem, 4vw, 3rem); }
 .wordmark--lg  { font-size: clamp(3rem, 8vw, 6rem); }
 .wordmark__line { display: block; }
+
+/* SVG logo */
+.logo-img {
+  display: block;
+  height: auto;
+  width: auto;
+}
+.brand__logo {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+.hero__logo {
+  display: block;
+  max-width: 100%;
+  width: clamp(280px, 38vw, 520px);
+  height: auto;
+  margin-bottom: var(--space-3);
+}
+.footer__logo {
+  display: block;
+  height: 64px;
+  width: auto;
+  margin-bottom: var(--space-3);
+}
 
 /* ============ Cover (big type over photo) ============ */
 .cover {

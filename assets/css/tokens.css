@@ -4,8 +4,8 @@
    Secundair: koningsblauw / diep groen / warm rood / paars — spaarzaam.
    Geen beige, geen koel grijs, geen pastel. */
 :root {
-  /* ── Primair ── */
-  --color-aubergine:    #5A1F2E;
+  /* ── Primair ── (uit officiële logo SVG's) */
+  --color-aubergine:    #400B28;
   --color-koningsblauw: #1F3A5F;
 
   /* ── Secundair ── */
@@ -19,9 +19,10 @@
   --color-steengrijs:   #7A7A7A;
 
   /* Afgeleiden */
-  --color-aubergine-deep: #3F1320;
-  --color-aubergine-soft: #7B3247;
-  --color-blush:          #F4DDD5; /* logo-tint, gebruikt op inverse */
+  --color-aubergine-deep: #2A0618;
+  --color-aubergine-soft: #5E1F36;
+  --color-blush:          #FFE7E8; /* exact pink uit logo */
+  --color-blush-soft:     #FFF1F2;
   --color-offwhite-soft:  #ECE7DD;
   --color-offwhite-warm:  #F7F3EC;
 

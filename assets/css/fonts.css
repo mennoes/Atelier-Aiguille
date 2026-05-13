@@ -1,13 +1,43 @@
-/* Cobya — display / headings.
-   Drop the font files into /assets/fonts/ with the names below.
-   Falls back to a tasteful serif stack if the file is missing. */
+/* Cobya — display font.
+   De .otf bestanden staan in /assets/fonts/.
+   We laden meerdere gewichten zodat de display headings de juiste weight kunnen pakken. */
+
 @font-face {
   font-family: "Cobya";
-  src: url("../fonts/Cobya.woff2") format("woff2"),
-       url("../fonts/Cobya.woff") format("woff"),
-       url("../fonts/Cobya.otf")  format("opentype"),
-       url("../fonts/Cobya.ttf")  format("truetype");
+  src: url("../fonts/Cobya-Regular.otf") format("opentype");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cobya";
+  src: url("../fonts/Cobya-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cobya";
+  src: url("../fonts/Cobya-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cobya";
+  src: url("../fonts/Cobya-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cobya";
+  src: url("../fonts/Cobya-Light.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
