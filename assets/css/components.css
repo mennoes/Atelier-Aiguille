@@ -118,31 +118,34 @@
 
 /* ============ Hero centered (homepage) ============ */
 .hero-centered {
-  padding-block: clamp(3rem, 9vw, var(--space-8)) 0;
+  padding-block: clamp(2rem, 6vw, var(--space-6)) 0;
 }
 .hero-centered__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: var(--space-4);
-  padding-bottom: clamp(2.5rem, 6vw, var(--space-7));
+  gap: var(--space-3);
+  padding-bottom: clamp(1.25rem, 3vw, var(--space-5));
 }
 .hero-centered__h1 {
-  margin: var(--space-3) 0 var(--space-3);
+  margin: 0;
 }
 .hero-centered__logo {
   display: block;
-  width: clamp(320px, 72vw, 880px);
+  width: clamp(240px, 60vw, 700px);
   max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
+.hero-centered__tagline {
+  margin-top: -0.25rem;
+}
 .hero-centered__lead {
-  max-width: 56ch;
+  max-width: 54ch;
   font-size: var(--fs-md);
   color: var(--color-ink-soft);
-  margin: 0 auto;
+  margin: var(--space-2) auto 0;
 }
 .hero-centered__cta {
   display: flex;
@@ -164,17 +167,21 @@
   display: block;
 }
 @media (max-width: 800px) {
+  .hero-centered { padding-block: clamp(1.5rem, 5vw, 3rem) 0; }
+  .hero-centered__inner { padding-bottom: clamp(1rem, 3vw, 1.5rem); }
   .hero-centered__media { aspect-ratio: 4 / 5; }
 }
 
 /* Header brand fade — alleen op homepage verstopt tot scroll */
-body.is-home .site-header .brand {
+body.is-home .site-header .brand,
+body.is-home .site-header .brand__logo {
   opacity: 0;
   transform: translateY(-6px);
   pointer-events: none;
   transition: opacity 500ms var(--ease), transform 500ms var(--ease);
 }
-body.is-home .site-header.is-scrolled .brand {
+body.is-home .site-header.is-scrolled .brand,
+body.is-home .site-header.is-scrolled .brand__logo {
   opacity: 1;
   transform: none;
   pointer-events: auto;
