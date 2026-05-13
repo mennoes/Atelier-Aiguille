@@ -447,15 +447,37 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
 /* Neutraliseer em binnen display-headings (Cobya kent geen italic) */
 .wordmark em, .claim__title em, .cover__title em, h1 em, h2 em, h3 em { font-style: normal; }
 
+/* ============ Pull quote — grote Cobya statement ============ */
+.statement {
+  padding-block: clamp(3rem, 9vw, var(--space-8));
+}
+.statement__quote {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 11vw, 9rem);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  color: var(--color-aubergine);
+  margin: 0 0 var(--space-4);
+  max-width: 18ch;
+}
+.statement__attr {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.statement--center { text-align: center; }
+.statement--center .statement__quote { margin-inline: auto; max-width: 22ch; }
+
 /* ============ Claim banner ============ */
 .claim {
   padding-block: clamp(4rem, 10vw, var(--space-9));
 }
 .claim__title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 9vw, 7.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.015em;
+  font-size: clamp(3rem, 13vw, 11rem);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
   margin: 0;
   max-width: 14ch;
 }
@@ -557,11 +579,11 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
 }
 .cover__title {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 12vw, 9rem);
-  line-height: 0.92;
-  letter-spacing: -0.01em;
+  font-size: clamp(3.5rem, 15vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
   margin: 0;
-  text-shadow: 0 1px 30px rgba(0,0,0,0.18);
+  text-shadow: 0 1px 30px rgba(0,0,0,0.22);
 }
 .cover__title em { font-style: italic; }
 .cover__sub {
