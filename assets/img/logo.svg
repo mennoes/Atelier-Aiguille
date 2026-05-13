@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Aiguille / needle mark — placeholder. Vervang met definitieve logo. -->
+  <circle cx="14" cy="18" r="3"/>
+  <path d="M14 21 L58 54"/>
+  <path d="M52 49 L56 51"/>
+  <path d="M48 45 L52 47"/>
+  <path d="M44 41 L48 43"/>
+</svg>

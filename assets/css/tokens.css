@@ -1,0 +1,81 @@
+/* Design tokens — Atelier Aiguille
+   Palette is overgenomen uit het Figma palette-bord (concept #1).
+   Achtergrond: warm off-white. Body: denim donker. Accent: aubergine.
+   Secundair: koningsblauw / diep groen / warm rood / paars — spaarzaam.
+   Geen beige, geen koel grijs, geen pastel. */
+:root {
+  /* ── Primair ── */
+  --color-aubergine:    #5A1F2E;
+  --color-koningsblauw: #1F3A5F;
+
+  /* ── Secundair ── */
+  --color-diepgroen:    #2F5D50;
+  --color-warmrood:     #8C1D18;
+  --color-paars:        #6B4D8B;
+
+  /* ── Neutrale basis ── */
+  --color-denim:        #2A2E3B; /* body text */
+  --color-offwhite:     #F2EFEA; /* page bg */
+  --color-steengrijs:   #7A7A7A;
+
+  /* Afgeleiden */
+  --color-aubergine-deep: #3F1320;
+  --color-aubergine-soft: #7B3247;
+  --color-blush:          #F4DDD5; /* logo-tint, gebruikt op inverse */
+  --color-offwhite-soft:  #ECE7DD;
+  --color-offwhite-warm:  #F7F3EC;
+
+  /* Aliassen — de rest van de CSS leest deze */
+  --color-bg:        var(--color-offwhite);
+  --color-surface:   var(--color-offwhite-soft);
+  --color-ink:       var(--color-denim);
+  --color-ink-soft:  #4A4F5C;
+  --color-muted:     var(--color-steengrijs);
+  --color-line:      #D9D3C7;
+  --color-accent:    var(--color-aubergine);
+
+  /* Inverse blok (aubergine vlak met blush-tint tekst — zoals het logo) */
+  --color-inverse-bg:   var(--color-aubergine);
+  --color-inverse-ink:  var(--color-blush);
+  --color-inverse-line: color-mix(in srgb, var(--color-blush) 28%, transparent);
+
+  /* Typografie */
+  --font-display: "Cobya", "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+  --font-body:    "Inter", "Helvetica Neue", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --fs-xs:   0.8125rem;
+  --fs-sm:   0.9375rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.375rem;
+  --fs-xl:   1.875rem;
+  --fs-2xl:  2.625rem;
+  --fs-3xl:  3.75rem;
+  --fs-4xl:  5.25rem;
+
+  --lh-tight: 1.02;
+  --lh-snug:  1.18;
+  --lh-base:  1.55;
+  --lh-loose: 1.75;
+
+  --tracking-display: -0.005em;
+  --tracking-eyebrow: 0.22em;
+
+  /* Ruimte */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 6rem;
+  --space-9: 9rem;
+
+  /* Layout */
+  --max-w: 1240px;
+  --max-w-prose: 56ch;
+  --radius: 2px;
+
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+}

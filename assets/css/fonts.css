@@ -1,0 +1,13 @@
+/* Cobya — display / headings.
+   Drop the font files into /assets/fonts/ with the names below.
+   Falls back to a tasteful serif stack if the file is missing. */
+@font-face {
+  font-family: "Cobya";
+  src: url("../fonts/Cobya.woff2") format("woff2"),
+       url("../fonts/Cobya.woff") format("woff"),
+       url("../fonts/Cobya.otf")  format("opentype"),
+       url("../fonts/Cobya.ttf")  format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
