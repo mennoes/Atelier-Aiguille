@@ -657,10 +657,74 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   .tile-grid > [class*="col-"] { grid-column: span 12; }
 }
 
-/* Subtiele scroll-fade */
-[data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
+/* ============ Color correction op alle echte foto's ============ */
+.hero__media img,
+.split__media img,
+.cover__media img,
+.gallery__item img,
+.tile-grid img {
+  filter: saturate(1.18) contrast(1.07) brightness(1.02);
+  transition: filter 900ms var(--ease), transform 1400ms var(--ease);
+}
+.gallery__item:hover img {
+  filter: saturate(1.32) contrast(1.12) brightness(1.04);
+  transform: scale(1.05);
+}
+
+/* Subtiele slow-zoom op hero / cover / split — Ken Burns lite */
+@keyframes slow-zoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.00); }
+}
+.hero__media img,
+.cover__media img,
+.split__media img {
+  animation: slow-zoom 22s var(--ease) both;
+}
+
+/* ============ Featured (baby/kleindochter) gallery items ============ */
+.gallery .gallery__item--featured {
+  grid-column: span 8;
+  aspect-ratio: 4 / 5;
+}
+.gallery .gallery__item--featured-wide {
+  grid-column: span 8;
+  aspect-ratio: 16 / 11;
+}
+@media (max-width: 800px) {
+  .gallery .gallery__item--featured,
+  .gallery .gallery__item--featured-wide {
+    grid-column: span 6;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* ============ Reveal animation — langere, soepelere fade ============ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1300ms var(--ease), transform 1400ms var(--ease);
+}
 [data-reveal].is-visible { opacity: 1; transform: none; }
+
+/* Stagger binnen gallery — opeenvolgende items komen na elkaar in beeld */
+.gallery [data-reveal]:nth-child(1) { transition-delay: 0ms; }
+.gallery [data-reveal]:nth-child(2) { transition-delay: 120ms; }
+.gallery [data-reveal]:nth-child(3) { transition-delay: 240ms; }
+.gallery [data-reveal]:nth-child(4) { transition-delay: 360ms; }
+.gallery [data-reveal]:nth-child(5) { transition-delay: 80ms; }
+.gallery [data-reveal]:nth-child(6) { transition-delay: 200ms; }
+.gallery [data-reveal]:nth-child(7) { transition-delay: 320ms; }
+.gallery [data-reveal]:nth-child(8) { transition-delay: 60ms; }
+
+/* Stagger binnen .services lijst */
+.services [data-reveal]:nth-child(1) { transition-delay: 0ms; }
+.services [data-reveal]:nth-child(2) { transition-delay: 140ms; }
+.services [data-reveal]:nth-child(3) { transition-delay: 280ms; }
+.services [data-reveal]:nth-child(4) { transition-delay: 420ms; }
+
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .hero__media img, .cover__media img, .split__media img { animation: none; }
   html { scroll-behavior: auto; }
 }
