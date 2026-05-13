@@ -326,17 +326,41 @@ body.is-home .site-header.is-scrolled .brand {
 
 .gallery__caption {
   position: absolute;
-  left: 1rem; bottom: 1rem;
-  font-size: var(--fs-xs);
-  letter-spacing: var(--tracking-eyebrow);
-  text-transform: uppercase;
-  color: var(--color-bg);
-  background: color-mix(in srgb, var(--color-ink) 70%, transparent);
-  padding: 0.4rem 0.65rem;
+  left: clamp(1rem, 3.5vw, 2rem);
+  bottom: clamp(1rem, 3.5vw, 2rem);
+  right: clamp(1rem, 3.5vw, 2rem);
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.8vw, 2.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--color-blush);
+  background: transparent;
+  padding: 0;
+  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.55), 0 0 2px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  transition: opacity 220ms var(--ease);
+  transform: translateY(10px);
+  transition: opacity 900ms var(--ease), transform 1000ms var(--ease);
+  pointer-events: none;
 }
-.gallery__item:hover .gallery__caption { opacity: 1; }
+.gallery__item:hover .gallery__caption,
+.gallery__item:focus-visible .gallery__caption {
+  opacity: 1;
+  transform: none;
+}
+.gallery__item:hover img,
+.gallery__item:focus-visible img {
+  filter: saturate(1.32) contrast(1.12) brightness(0.88);
+  transform: scale(1.05);
+}
+
+/* Featured (groot) cards mogen iets grotere caption */
+.gallery__item--featured-wide .gallery__caption,
+.gallery__item--featured .gallery__caption {
+  font-size: clamp(1.75rem, 3.6vw, 3.25rem);
+  max-width: 24ch;
+}
 
 /* Lightbox */
 .lightbox {
