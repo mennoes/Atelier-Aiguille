@@ -317,26 +317,20 @@ body.is-home .site-header.is-scrolled .brand__logo {
 }
 .gallery__item:hover img { transform: scale(1.03); }
 
-/* Compositie — een rustige, atelier-achtige raster met variatie */
-.gallery__item:nth-child(8n+1) { grid-column: span 7; aspect-ratio: 4 / 5; }
-.gallery__item:nth-child(8n+2) { grid-column: span 5; aspect-ratio: 4 / 5; }
-.gallery__item:nth-child(8n+3) { grid-column: span 5; aspect-ratio: 1 / 1; }
-.gallery__item:nth-child(8n+4) { grid-column: span 7; aspect-ratio: 4 / 3; }
-.gallery__item:nth-child(8n+5) { grid-column: span 4; aspect-ratio: 3 / 4; }
-.gallery__item:nth-child(8n+6) { grid-column: span 4; aspect-ratio: 3 / 4; }
-.gallery__item:nth-child(8n+7) { grid-column: span 4; aspect-ratio: 3 / 4; }
-.gallery__item:nth-child(8n+8) { grid-column: span 12; aspect-ratio: 16 / 9; }
+/* Compositie — afwisselend 3-op-een-rij en 2-op-een-rij, nooit alleen */
+.gallery__item:nth-child(5n+1) { grid-column: span 4; aspect-ratio: 4 / 5; }
+.gallery__item:nth-child(5n+2) { grid-column: span 4; aspect-ratio: 3 / 4; }
+.gallery__item:nth-child(5n+3) { grid-column: span 4; aspect-ratio: 4 / 5; }
+.gallery__item:nth-child(5n+4) { grid-column: span 6; aspect-ratio: 4 / 3; }
+.gallery__item:nth-child(5n+5) { grid-column: span 6; aspect-ratio: 4 / 3; }
 
 @media (max-width: 800px) {
   .gallery { grid-template-columns: repeat(6, 1fr); }
-  .gallery__item:nth-child(8n+1),
-  .gallery__item:nth-child(8n+2),
-  .gallery__item:nth-child(8n+4) { grid-column: span 6; aspect-ratio: 4 / 3; }
-  .gallery__item:nth-child(8n+3) { grid-column: span 6; aspect-ratio: 1 / 1; }
-  .gallery__item:nth-child(8n+5),
-  .gallery__item:nth-child(8n+6),
-  .gallery__item:nth-child(8n+7) { grid-column: span 3; aspect-ratio: 3 / 4; }
-  .gallery__item:nth-child(8n+8) { grid-column: span 6; aspect-ratio: 16 / 9; }
+  .gallery__item:nth-child(5n+1),
+  .gallery__item:nth-child(5n+2),
+  .gallery__item:nth-child(5n+3) { grid-column: span 3; aspect-ratio: 3 / 4; }
+  .gallery__item:nth-child(5n+4),
+  .gallery__item:nth-child(5n+5) { grid-column: span 6; aspect-ratio: 4 / 3; }
 }
 
 .gallery__caption {
@@ -865,21 +859,10 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   animation: slow-zoom 22s var(--ease) both;
 }
 
-/* ============ Featured (baby/kleindochter) gallery items ============ */
-.gallery .gallery__item--featured {
-  grid-column: span 8;
-  aspect-ratio: 4 / 5;
-}
-.gallery .gallery__item--featured-wide {
-  grid-column: span 8;
-  aspect-ratio: 16 / 11;
-}
-@media (max-width: 800px) {
-  .gallery .gallery__item--featured,
-  .gallery .gallery__item--featured-wide {
-    grid-column: span 6;
-    aspect-ratio: 3 / 4;
-  }
+/* Utility — heading op één regel */
+.nowrap { white-space: nowrap; }
+@media (max-width: 600px) {
+  .nowrap { white-space: normal; }
 }
 
 /* ============ Reveal animation — langere, soepelere fade ============ */
