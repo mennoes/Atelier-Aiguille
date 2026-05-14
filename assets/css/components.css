@@ -3,13 +3,12 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
-  backdrop-filter: saturate(140%) blur(10px);
-  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  background: var(--color-warmrood);
+  color: var(--color-blush);
   border-bottom: 1px solid transparent;
   transition: border-color 240ms var(--ease);
 }
-.site-header.is-scrolled { border-bottom-color: var(--color-line); }
+.site-header.is-scrolled { border-bottom-color: color-mix(in srgb, var(--color-blush) 25%, transparent); }
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -25,7 +24,7 @@
   font-size: 1.5rem;
   letter-spacing: 0.01em;
   border-bottom: none;
-  color: var(--color-ink);
+  color: var(--color-blush);
 }
 .brand__mark { font-size: 1.25rem; color: var(--color-muted); }
 .brand__name { line-height: 1; }
@@ -46,21 +45,28 @@
 .nav__link {
   font-size: var(--fs-sm);
   letter-spacing: 0.04em;
-  color: var(--color-ink-soft);
+  color: color-mix(in srgb, var(--color-blush) 85%, transparent);
   padding-block: 0.25rem;
   border-bottom: 1px solid transparent;
 }
 .nav__link:hover,
 .nav__link[aria-current="page"] {
-  color: var(--color-ink);
-  border-bottom-color: var(--color-ink);
+  color: var(--color-blush);
+  border-bottom-color: var(--color-blush);
 }
 .nav-toggle {
   display: none;
   background: transparent;
   border: 0;
-  padding: 0.5rem;
-  color: var(--color-ink);
+  padding: 0.75rem;
+  margin: -0.25rem;
+  min-width: 48px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blush);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .nav-toggle__bars { display: block; width: 26px; height: 2px; background: currentColor; position: relative; }
 .nav-toggle__bars::before,
@@ -82,8 +88,8 @@
     flex-direction: column;
     gap: 0;
     padding: var(--space-4) clamp(1.25rem, 4vw, 2.5rem) var(--space-5);
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-line);
+    background: var(--color-warmrood);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-blush) 25%, transparent);
     transform: translateY(-12px);
     opacity: 0;
     pointer-events: none;
@@ -91,16 +97,21 @@
   }
   .nav__list[data-open="true"] { transform: none; opacity: 1; pointer-events: auto; }
   .nav__link {
-    padding-block: 1rem;
+    display: block;
+    padding-block: 1.1rem;
+    padding-inline: 0.25rem;
+    min-height: 56px;
     font-family: var(--font-display);
     font-size: clamp(1.75rem, 6.5vw, 2.5rem);
     line-height: 1.1;
     letter-spacing: -0.01em;
-    color: var(--color-aubergine);
-    border-bottom: 1px solid var(--color-line);
+    color: var(--color-blush);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-blush) 25%, transparent);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: color-mix(in srgb, var(--color-blush) 18%, transparent);
   }
   .nav__link:last-child { border-bottom: 0; }
-  .nav__link[aria-current="page"] { color: var(--color-aubergine); border-bottom-color: var(--color-aubergine); }
+  .nav__link[aria-current="page"] { color: var(--color-blush); border-bottom-color: var(--color-blush); }
 }
 
 /* ============ Buttons ============ */
@@ -681,6 +692,7 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   display: block;
   height: 38px;
   width: auto;
+  filter: brightness(0) invert(1);
 }
 .hero__logo {
   display: block;
