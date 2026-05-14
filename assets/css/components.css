@@ -90,8 +90,17 @@
     transition: opacity 220ms var(--ease), transform 240ms var(--ease);
   }
   .nav__list[data-open="true"] { transform: none; opacity: 1; pointer-events: auto; }
-  .nav__link { padding-block: 0.75rem; font-size: var(--fs-md); border-bottom: 1px solid var(--color-line); }
+  .nav__link {
+    padding-block: 1rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 6.5vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-aubergine);
+    border-bottom: 1px solid var(--color-line);
+  }
   .nav__link:last-child { border-bottom: 0; }
+  .nav__link[aria-current="page"] { color: var(--color-aubergine); border-bottom-color: var(--color-aubergine); }
 }
 
 /* ============ Buttons ============ */
