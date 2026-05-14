@@ -1007,7 +1007,7 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   width: 75%;
   max-width: 1200px;
   margin: clamp(2rem, 5vw, 4rem) auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 21 / 6;
   overflow: hidden;
   background: var(--color-surface);
 }
