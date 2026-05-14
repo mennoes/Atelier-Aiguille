@@ -340,51 +340,7 @@ body.is-home .site-header.is-scrolled .brand__logo {
 }
 
 .gallery__caption {
-  position: absolute;
-  left: clamp(1rem, 3.5vw, 2rem);
-  bottom: clamp(1rem, 3.5vw, 2rem);
-  right: clamp(1rem, 3.5vw, 2rem);
-  max-width: 22ch;
-  font-family: var(--font-display) !important;
-  font-size: clamp(1.4rem, 2.8vw, 2.4rem);
-  line-height: 1.04;
-  letter-spacing: -0.005em;
-  text-transform: none !important;
-  color: var(--color-blush);
-  background: transparent !important;
-  padding: 0;
-  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.6), 0 0 2px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-}
-
-/* Desktop: rustige hover-fade */
-@media (hover: hover) {
-  .gallery__caption {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 900ms var(--ease), transform 1000ms var(--ease);
-  }
-  .gallery__item:hover .gallery__caption,
-  .gallery__item:focus-visible .gallery__caption {
-    opacity: 1;
-    transform: none;
-  }
-  .gallery__item:hover img,
-  .gallery__item:focus-visible img {
-    filter: saturate(1.32) contrast(1.12) brightness(0.88);
-    transform: scale(1.05);
-  }
-}
-
-/* Touch (mobiel/tablet): captions altijd zichtbaar */
-@media (hover: none) {
-  .gallery__caption {
-    opacity: 1;
-    transform: none;
-  }
-  .gallery__item img {
-    filter: saturate(1.18) contrast(1.07) brightness(0.92);
-  }
+  display: none;
 }
 
 /* Featured (groot) cards mogen iets grotere caption */
