@@ -545,6 +545,20 @@ a.contact-rows__value:hover { border-bottom-color: currentColor; }
 }
 .inverse .placeholder::after { color: color-mix(in srgb, var(--color-inverse-ink) 40%, transparent); }
 
+/* Diep groen variant — voor color-block quotes */
+.inverse--green {
+  --color-inverse-bg: var(--color-diepgroen);
+  --color-inverse-ink: var(--color-blush);
+  --color-inverse-line: color-mix(in srgb, var(--color-blush) 28%, transparent);
+}
+
+/* Blush variant — zachter color block, aubergine letters op roze */
+.inverse--blush {
+  --color-inverse-bg: var(--color-blush);
+  --color-inverse-ink: var(--color-aubergine);
+  --color-inverse-line: color-mix(in srgb, var(--color-aubergine) 25%, transparent);
+}
+
 /* Display accent — gebruikt voor highlight binnen Cobya headings */
 .accent {
   color: var(--color-blush);
