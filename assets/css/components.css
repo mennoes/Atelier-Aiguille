@@ -1004,9 +1004,8 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
 
 /* ============ Feature image — gecentreerd, 75% breed op laptop ============ */
 .feature-image {
-  width: 75%;
-  max-width: 1200px;
-  margin: clamp(2rem, 5vw, 4rem) auto;
+  width: 100vw;
+  margin: clamp(2rem, 5vw, 4rem) 0 clamp(2rem, 5vw, 4rem) calc(50% - 50vw);
   aspect-ratio: 21 / 8;
   overflow: hidden;
   background: var(--color-surface);
