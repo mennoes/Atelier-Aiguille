@@ -259,7 +259,7 @@ body.is-home .site-header.is-scrolled .brand__logo {
 }
 .services li {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   gap: var(--space-4);
   align-items: baseline;
   padding: var(--space-4) 0;
@@ -277,9 +277,8 @@ body.is-home .site-header.is-scrolled .brand__logo {
   line-height: var(--lh-snug);
 }
 .services__desc {
-  grid-column: 2 / 3;
   color: var(--color-ink-soft);
-  max-width: 60ch;
+  max-width: none;
   margin: 0.35rem 0 0;
 }
 .services__note {
