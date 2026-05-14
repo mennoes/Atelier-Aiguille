@@ -27,8 +27,8 @@
   --color-offwhite-warm:  #F7F3EC;
 
   /* Aliassen — de rest van de CSS leest deze */
-  --color-bg:        var(--color-offwhite);
-  --color-surface:   var(--color-offwhite-soft);
+  --color-bg:        var(--color-blush);
+  --color-surface:   var(--color-blush-soft);
   --color-ink:       var(--color-denim);
   --color-ink-soft:  #4A4F5C;
   --color-muted:     var(--color-steengrijs);
