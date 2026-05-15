@@ -6,7 +6,7 @@
   <title>Galerij — werk uit het atelier | Atelier Aiguille</title>
   <meta name="description" content="Een kijkje in het atelier: handgemaakte kleding, tassen en details uit het werk van Jannie." />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-  <link rel="stylesheet" href="assets/css/main.css?v=2605151608" />
+  <link rel="stylesheet" href="assets/css/main.css?v=2605151613" />
   <meta name="theme-color" content="#400B28" />
 </head>
 <body>
@@ -23,10 +23,9 @@
         </button>
         <ul class="nav__list" id="primary-nav">
           <li><a class="nav__link" href="index.html">Home</a></li>
-          <li><a class="nav__link" href="over.html">Over</a></li>
           <li><a class="nav__link" href="atelier.html">Atelier</a></li>
           <li><a class="nav__link" href="galerij.html">Galerij</a></li>
-          <li><a class="nav__link" href="contact.html">Contact</a></li>
+          <li><a class="nav__link" href="over.html">Over mij</a></li>
         </ul>
       </nav>
     </div>
@@ -82,7 +81,7 @@
           dan zien we wel.
         </p>
         <p style="margin-top: var(--space-4)">
-          <a class="btn" href="contact.html">Neem contact op <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <a class="btn" href="over.html#contact">Neem contact op <span class="btn__arrow" aria-hidden="true">→</span></a>
         </p>
       </div>
     </section>
@@ -92,7 +91,10 @@
     <div class="container">
       <div class="site-footer__inner">
         <div>
-          <img class="footer__logo" src="assets/img/logo-wordmark-dongen.svg" alt="Atelier Aiguille — Dongen" />
+          <a href="index.html" class="footer__brand">
+            <img class="footer__logo" src="assets/img/logo-wordmark.svg" alt="Atelier Aiguille" />
+            <span class="footer__brand-sub">Dongen</span>
+          </a>
           <p style="margin-top: var(--space-3); max-width: 40ch;">
             Het kleine label van Jannie. Handgemaakte kleding en tassen
             uit Dongen, vaak van hergebruikte materialen.
@@ -101,17 +103,16 @@
         <div>
           <h4>Bekijk</h4>
           <ul>
-            <li><a href="over.html">Over</a></li>
             <li><a href="atelier.html">Atelier</a></li>
             <li><a href="galerij.html">Galerij</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="over.html">Over mij</a></li>
           </ul>
         </div>
         <div>
           <h4>Bezoek</h4>
           <ul>
             <li>Dongen — op afspraak</li>
-            <li><a href="contact.html">Maak een afspraak</a></li>
+            <li><a href="over.html#contact">Maak een afspraak</a></li>
           </ul>
         </div>
       </div>
