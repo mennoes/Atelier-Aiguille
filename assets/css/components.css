@@ -912,7 +912,7 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   background: var(--color-aubergine);
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding: clamp(2rem, 5vw, 4.5rem) clamp(1.5rem, 6vw, 6rem);
+  padding: 0 clamp(1.5rem, 6vw, 6rem) clamp(3rem, 5vw, 4.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
