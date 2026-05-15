@@ -224,6 +224,22 @@ body.is-home .site-header.is-scrolled .nav__link[aria-current="page"] {
 }
 body.is-home .site-header.is-scrolled .nav-toggle { color: var(--color-ink); }
 
+/* Menu open op mobiel: forceer aubergine header zodat menu leesbaar is */
+@media (max-width: 760px) {
+  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) {
+    background: var(--color-aubergine);
+    color: var(--color-blush);
+    border-bottom-color: color-mix(in srgb, var(--color-blush) 25%, transparent);
+  }
+  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) .brand__logo {
+    filter: brightness(0) invert(1);
+  }
+  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) .nav-toggle,
+  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) .nav__link {
+    color: var(--color-blush);
+  }
+}
+
 /* ============ Hero ============ */
 .hero {
   display: grid;
@@ -353,12 +369,9 @@ body.is-home .site-header.is-scrolled .nav-toggle { color: var(--color-ink); }
 .gallery__item:nth-child(5n+5) { grid-column: span 6; aspect-ratio: 4 / 3; }
 
 @media (max-width: 800px) {
-  .gallery { grid-template-columns: repeat(6, 1fr); }
-  .gallery__item:nth-child(5n+1),
-  .gallery__item:nth-child(5n+2),
-  .gallery__item:nth-child(5n+3) { grid-column: span 3; aspect-ratio: 3 / 4; }
-  .gallery__item:nth-child(5n+4),
-  .gallery__item:nth-child(5n+5) { grid-column: span 6; aspect-ratio: 4 / 3; }
+  .gallery { grid-template-columns: 1fr; gap: clamp(1rem, 3vw, 1.5rem); }
+  .gallery__item:nth-child(n) { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
+  .gallery__item:nth-child(even) { aspect-ratio: 4 / 3; }
 }
 
 .gallery__caption {
