@@ -207,35 +207,41 @@ body.is-home .site-header.is-scrolled .brand__logo {
   pointer-events: auto;
 }
 
-/* Op homepage bij scroll: aubergine balk weg, donkere letters/iconen */
+/* Transparante header: non-home pagina's altijd, homepage na scroll */
+body:not(.is-home) .site-header,
 body.is-home .site-header.is-scrolled {
   background: transparent;
   color: var(--color-ink);
   border-bottom-color: color-mix(in srgb, var(--color-ink) 12%, transparent);
 }
+body:not(.is-home) .site-header .brand__logo,
 body.is-home .site-header.is-scrolled .brand__logo { filter: none; }
+body:not(.is-home) .site-header .nav__link,
 body.is-home .site-header.is-scrolled .nav__link {
   color: color-mix(in srgb, var(--color-ink) 85%, transparent);
 }
+body:not(.is-home) .site-header .nav__link:hover,
+body:not(.is-home) .site-header .nav__link[aria-current="page"],
 body.is-home .site-header.is-scrolled .nav__link:hover,
 body.is-home .site-header.is-scrolled .nav__link[aria-current="page"] {
   color: var(--color-ink);
   border-bottom-color: var(--color-ink);
 }
+body:not(.is-home) .site-header .nav-toggle,
 body.is-home .site-header.is-scrolled .nav-toggle { color: var(--color-ink); }
 
 /* Menu open op mobiel: forceer aubergine header zodat menu leesbaar is */
 @media (max-width: 760px) {
-  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) {
+  .site-header:has(.nav-toggle[aria-expanded="true"]) {
     background: var(--color-aubergine);
     color: var(--color-blush);
     border-bottom-color: color-mix(in srgb, var(--color-blush) 25%, transparent);
   }
-  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) .brand__logo {
+  .site-header:has(.nav-toggle[aria-expanded="true"]) .brand__logo {
     filter: brightness(0) invert(1);
   }
-  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) .nav-toggle,
-  body.is-home .site-header:has(.nav-toggle[aria-expanded="true"]) .nav__link {
+  .site-header:has(.nav-toggle[aria-expanded="true"]) .nav-toggle,
+  .site-header:has(.nav-toggle[aria-expanded="true"]) .nav__link {
     color: var(--color-blush);
   }
 }
