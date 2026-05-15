@@ -916,7 +916,7 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: clamp(240px, 38vh, 420px);
+  min-height: clamp(200px, 30vh, 340px);
   overflow: hidden;
 }
 .hero-banner__art {
@@ -925,7 +925,7 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   height: auto;
 }
 @media (max-width: 800px) {
-  .hero-banner { min-height: clamp(220px, 44vh, 360px); }
+  .hero-banner { min-height: clamp(180px, 34vh, 280px); }
   .hero-banner__art { width: min(82%, 520px); }
 }
 
