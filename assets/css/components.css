@@ -1029,5 +1029,5 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
   display: block;
 }
 @media (max-width: 800px) {
-  .feature-image { width: 92%; aspect-ratio: 4 / 5; }
+  .feature-image { aspect-ratio: 3 / 2; }
 }
