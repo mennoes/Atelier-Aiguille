@@ -6,7 +6,7 @@
   background: var(--color-aubergine);
   color: var(--color-blush);
   border-bottom: 1px solid transparent;
-  transition: border-color 240ms var(--ease);
+  transition: background-color 240ms var(--ease), color 240ms var(--ease), border-color 240ms var(--ease);
 }
 .site-header.is-scrolled { border-bottom-color: color-mix(in srgb, var(--color-blush) 25%, transparent); }
 .site-header__inner {
@@ -206,6 +206,23 @@ body.is-home .site-header.is-scrolled .brand__logo {
   transform: none;
   pointer-events: auto;
 }
+
+/* Op homepage bij scroll: aubergine balk weg, donkere letters/iconen */
+body.is-home .site-header.is-scrolled {
+  background: transparent;
+  color: var(--color-ink);
+  border-bottom-color: color-mix(in srgb, var(--color-ink) 12%, transparent);
+}
+body.is-home .site-header.is-scrolled .brand__logo { filter: none; }
+body.is-home .site-header.is-scrolled .nav__link {
+  color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+}
+body.is-home .site-header.is-scrolled .nav__link:hover,
+body.is-home .site-header.is-scrolled .nav__link[aria-current="page"] {
+  color: var(--color-ink);
+  border-bottom-color: var(--color-ink);
+}
+body.is-home .site-header.is-scrolled .nav-toggle { color: var(--color-ink); }
 
 /* ============ Hero ============ */
 .hero {
