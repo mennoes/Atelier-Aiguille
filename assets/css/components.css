@@ -382,6 +382,7 @@ body.is-home .site-header.is-scrolled .nav-toggle { color: var(--color-ink); }
   .gallery { grid-template-columns: 1fr; gap: clamp(1rem, 3vw, 1.5rem); }
   .gallery__item:nth-child(n) { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
   .gallery__item:nth-child(even) { aspect-ratio: 4 / 3; }
+  .gallery__item--hide-mobile { display: none; }
 }
 
 .gallery__caption {
