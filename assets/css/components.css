@@ -210,7 +210,7 @@ body.is-home .site-header.is-scrolled .brand__logo {
 /* Transparante header: non-home pagina's altijd, homepage na scroll */
 body:not(.is-home) .site-header,
 body.is-home .site-header.is-scrolled {
-  background: transparent;
+  background: var(--color-blush);
   color: var(--color-ink);
   border-bottom-color: color-mix(in srgb, var(--color-ink) 12%, transparent);
 }
