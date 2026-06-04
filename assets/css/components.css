@@ -731,9 +731,12 @@ section:not(.inverse) .accent { color: var(--color-aubergine-soft); opacity: 1; 
 }
 .brand__logo {
   display: block;
-  height: 38px;
+  height: 44px;
   width: auto;
   filter: brightness(0) invert(1);
+}
+@media (max-width: 760px) {
+  .brand__logo { height: 52px; }
 }
 .hero__logo {
   display: block;
